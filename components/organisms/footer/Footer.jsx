@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const Footer = () => {
   const router = useRouter();
   const handleRouter = (url) => {
-    router.p;
+    router.push(url);
   };
   return (
     <Flex
@@ -21,15 +21,17 @@ const Footer = () => {
         <Link>Login</Link>
         <Link>Register</Link>
         <Link>Blogs</Link>
-        <Link>About</Link>
       </Flex>
       <Divider maxW="460px" border="5px" borderRadius={"100px"} />
       <Flex maxW="330px">
         <Text textAlign={"justify"}>
           Kanagawa is a digital notebook and blog that uses markdown developed
           on Next.js with chakra-ui. This app was started by{" "}
-          <Link>@olaracode</Link>. Want to contribute? Jump into the repository
-          and see where you can make yourself useful :)
+          <Link onClick={() => handleRouter("https://github.com/olaracode/")}>
+            @olaracode
+          </Link>
+          . Want to contribute? Jump into the repository and see where you can
+          make yourself useful :)
         </Text>
       </Flex>
     </Flex>
