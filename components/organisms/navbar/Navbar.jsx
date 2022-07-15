@@ -17,37 +17,40 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AppContext } from "context";
 const Navbar = () => {
   const { isDarkTheme, setDarkTheme } = useContext(AppContext);
-  const logo = "/assets/imgs/techielogo.svg";
   return (
     <Box w="100%" bg="brand.card" shadow={"md"}>
       <Flex justify={"space-between"} h={"60px"} mx={"6%"} align="center">
         <Flex justify={"center"} align="center" gap="3">
-          <Image src={logo} h="30px" />
           <Text
             as="p"
             fontSize="16px"
             cursor="pointer"
-            color={"brand.main"}
+            color={"brand.accent"}
             fontWeight={"bold"}
           >
             Techie
           </Text>
         </Flex>
         <Flex gap={2} align="center" display={{ base: "none", md: "flex" }}>
-          <Button bg="none" onClick={() => setDarkTheme(!isDarkTheme)}>
+          <Button
+            bg="none"
+            _hover={{ bg: "brand.light", color: "brand.dark" }}
+            onClick={() => setDarkTheme(!isDarkTheme)}
+          >
             <FontAwesomeIcon icon={faMoon} />
           </Button>
-          <CustomButton bg="none" hover={false} content="About" />
+          <CustomButton bg="none" hover content="About" />
           <CustomButton bg="none" content="Login" hover="true" />
-          <CustomButton ftColor={"white"} hover={true} content="register" />
+          <CustomButton hover={true} content="register" />
         </Flex>
         <Box display={{ sm: "block", md: "none", lg: "none", xl: "none" }}>
           <Menu>
             <MenuButton
               border="2px solid"
-              borderColor="brand.main"
+              borderColor="brand.accent"
               py="10px"
               px="15px"
+              color="brand.accent"
               borderRadius="8px"
             >
               <FontAwesomeIcon icon={faBars} />
@@ -60,7 +63,11 @@ const Navbar = () => {
               shadow={"md"}
             >
               <MenuItem
-                _hover={{ color: "text.hover" }}
+                _hover={{
+                  color: "text.clear",
+                  bg: "brand.accent",
+                  filter: "brightness: 50%",
+                }}
                 borderRadius="8px"
                 onClick={() => setDarkTheme(!isDarkTheme)}
               >
@@ -69,17 +76,36 @@ const Navbar = () => {
                   <Text>Theme</Text>
                 </Flex>
               </MenuItem>
-              <MenuItem _hover={{ color: "text.hover" }} borderRadius="8px">
+              <MenuItem
+                _hover={{
+                  color: "text.clear",
+                  bg: "brand.accent",
+                  filter: "brightness: 50%",
+                }}
+                borderRadius="8px"
+              >
                 About
               </MenuItem>
-              <MenuItem _hover={{ color: "text.hover" }} borderRadius="8px">
+              <MenuItem
+                _hover={{
+                  color: "text.clear",
+                  bg: "brand.accent",
+                  filter: "brightness: 50%",
+                }}
+                borderRadius="8px"
+              >
                 Login
               </MenuItem>
               <MenuItem
                 my="3"
-                _hover={{ color: "text.hover" }}
+                _hover={{
+                  color: "text.clear",
+                  bg: "brand.accent",
+                  filter: "brightness: 50%",
+                }}
+                color="brand.light"
                 borderRadius="8px"
-                bg={"brand.main"}
+                bg={"brand.dark"}
               >
                 <Text textAlign={"center"} w="100%">
                   Register

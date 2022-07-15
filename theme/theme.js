@@ -4,21 +4,22 @@ export const darkTheme = extendTheme({
   styles: {
     global: {
       body: {
-        color: "#ffffff",
-        background: "#0A131F",
+        color: "#FFFBEC",
+        background: "#474955",
       },
     },
   },
   colors: {
     brand: {
-      bg: "#0A131F",
-      card: "#14243B",
-      main: "#457B9D",
-      light: "#A8DADC",
-      accent: "#E63946",
+      light: "#FFFBEC",
+      accent: "#B1C1BD",
+      main: "#507995",
+      dark: "#42505F",
+      card: "#4E505D",
     },
     text: {
-      main: "#ffffff",
+      main: "#FFFBEC",
+      clear: "#FFFBEC",
       hover: "#000",
     },
   },
@@ -28,21 +29,22 @@ export const lightTheme = extendTheme({
   styles: {
     global: {
       body: {
-        color: "black",
-        background: "#ffffff",
+        color: "#495869",
+        background: "#fafafa",
       },
     },
   },
   colors: {
     brand: {
-      bg: "#ffffff",
-      card: "#fafafa",
-      main: "#457B9D",
-      light: "#A8DADC",
-      accent: "#E63946",
+      light: "#FFFBEC",
+      card: "#ffffff",
+      accent: "#B1C1BD",
+      main: "#507995",
+      dark: "#495869",
     },
     text: {
-      main: "#000000",
+      main: "#495869",
+      clear: "#FFFBEC",
       hover: "#457B9D",
     },
   },
