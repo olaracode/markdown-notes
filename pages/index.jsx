@@ -3,12 +3,13 @@ import { CustomButton, CustomInput } from "@/atoms/index";
 export default function Home() {
   return (
     <Flex
-      position={"absolute"}
       h="100vh"
       w="100vw"
       top={"0px"}
       backgroundImage="/assets/imgs/kanagawa.jpeg"
       bgPosition={"center"}
+      bgSize="cover"
+      bgRepeat={"no-repeat"}
       justify="center"
       align={"center"}
     >
