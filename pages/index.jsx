@@ -48,7 +48,7 @@ export default function Home() {
         >
           <CustomButton bg="none" content="Inicia sesion" maxW="160" />
           <Text textAlign={"center"} fontSize="xs">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Text
               as={"span"}
               fontWeight={"black"}
