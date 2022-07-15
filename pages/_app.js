@@ -3,6 +3,7 @@ import ThemeProvider from "theme/ThemeProvider";
 import "../styles/globals.css";
 import { AppProvider } from "context/ContextProvider";
 import Head from "next/head";
+import Layout from "components/Layout";
 function MyApp({ Component, pageProps }) {
   return (
     <AppProvider>
@@ -15,8 +16,9 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <ThemeProvider>
-        <Navbar />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </AppProvider>
   );

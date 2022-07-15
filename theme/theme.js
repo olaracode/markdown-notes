@@ -36,7 +36,7 @@ export const lightTheme = extendTheme({
   },
   colors: {
     brand: {
-      light: "#FFFBEC",
+      light: "#F9E8C4",
       card: "#ffffff",
       accent: "#B1C1BD",
       main: "#507995",
