@@ -1,6 +1,8 @@
 import { Box, Flex, Text, Input } from "@chakra-ui/react";
 import { CustomButton, CustomInput } from "@/atoms/index";
+import { useRouter } from "next/router";
 export default function Home() {
+  const router = useRouter();
   return (
     <Flex
       h="100vh"
@@ -47,7 +49,12 @@ export default function Home() {
           direction={"column"}
           gap="1"
         >
-          <CustomButton bg="none" content="Inicia sesion" maxW="160" />
+          <CustomButton
+            bg="none"
+            onClick={() => router.push("/notebook")}
+            content="Inicia sesion"
+            maxW="160"
+          />
           <Text textAlign={"center"} fontSize="xs">
             Don&apos;t have an account?{" "}
             <Text
