@@ -16,7 +16,7 @@ const Footer = () => {
       align={"center"}
       justify="center"
     >
-      <Flex gap="3">
+      <Flex w="100%" maxW="330px" justify={"space-between"}>
         <Link fontWeight={"black"}>Kanagawa</Link>
         <Link>Login</Link>
         <Link>Register</Link>
